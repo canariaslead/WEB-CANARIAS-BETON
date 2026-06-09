@@ -46,8 +46,7 @@ export default function Products({ show = false }: Props) {
           Encuentra la solución<br />que necesitas.
         </h2>
         <p className={`products__sub${visible ? ' products__sub--in' : ''}`}>
-          Fabricamos y suministramos hormigón adaptado<br />
-          a cada tipo de obra y proyecto.
+          Fabricamos y suministramos hormigón adaptado a cada tipo de obra y proyecto.
         </p>
       </div>
 

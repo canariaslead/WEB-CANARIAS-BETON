@@ -278,9 +278,18 @@
 
 @media (max-width: 480px) {
   .pgallery { padding: 48px 16px; }
-  .pgallery__slide { width: 72px; }
-  .pgallery__slide--active { width: calc(100vw - 32px - 72px - 12px); }
-  .pgallery__img-wrap { height: 220px; border-radius: 12px; }
+
+  /* ocultar slides inactivos en mobile — solo ver la activa full-width */
+  .pgallery__slide { display: none; }
+  .pgallery__slide--active {
+    display: block;
+    width: calc(100vw - 32px);
+    min-width: unset;
+  }
+
+  .pgallery__img-wrap { height: 260px; border-radius: 14px; }
+  .pgallery__label { opacity: 1; }
   .pgallery__title { font-size: 24px; }
   .pgallery__btn { width: 38px; height: 38px; }
+  .pgallery__count { margin-left: 4px; }
 }

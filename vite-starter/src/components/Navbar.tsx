@@ -3,10 +3,9 @@ import logoSrc from '../assets/LOGO_BETON.webp'
 import './Navbar.css'
 
 const LEFT_LINKS = [
-  { label: 'Fabricación',  dropdown: false },
-  { label: 'Distribución', dropdown: false },
-  { label: 'Bombeo',       dropdown: false },
-  { label: 'Nosotros',     dropdown: false },
+  { label: 'Servicios', dropdown: false },
+  { label: 'Nosotros',  dropdown: false },
+  { label: 'Contacto',  dropdown: false },
 ]
 
 export default function Navbar() {
@@ -44,14 +43,8 @@ export default function Navbar() {
           <span className="nav-logo__name">CANARIAS BETON</span>
         </a>
 
-        {/* right — lang + CTA */}
+        {/* right — CTA */}
         <div className="nav-right">
-          <button className="nav-lang">
-            Es
-            <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-              <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </button>
           <a href="#contacto" className="nav-cta">Solicitar presupuesto</a>
         </div>
 
