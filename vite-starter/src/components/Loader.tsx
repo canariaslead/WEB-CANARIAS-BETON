@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import heroImg from '../assets/hormigon-fresco.jpeg'
+import heroImg from '../assets/hormigon-fresco.webp'
 import './Loader.css'
 
 interface Props { onDone: () => void }

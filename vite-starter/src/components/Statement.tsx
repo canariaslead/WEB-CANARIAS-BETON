@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import sikaLogo   from '../assets/sika.svg'
-import prearsa    from '../assets/prearsa.png'
-import asinca     from '../assets/asijca.jpg'
-import bycanarias from '../assets/bycanarias.png'
-import arifoma    from '../assets/logov3.png'
-import plantImg   from '../assets/planta.jpeg'
+import prearsa    from '../assets/prearsa.webp'
+import asinca     from '../assets/asijca.webp'
+import bycanarias from '../assets/bycanarias.webp'
+import arifoma    from '../assets/logov3.webp'
+import plantImg   from '../assets/planta.webp'
 import './Statement.css'
 
 export default function Statement() {

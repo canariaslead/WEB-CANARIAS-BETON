@@ -1,4 +1,4 @@
-import logoSrc from '../assets/LOGO_BETON.PNG'
+import logoSrc from '../assets/LOGO_BETON.webp'
 import './Footer.css'
 
 export default function Footer() {

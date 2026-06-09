@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import logoSrc from '../assets/LOGO_BETON.PNG'
+import logoSrc from '../assets/LOGO_BETON.webp'
 import './Navbar.css'
 
 const LEFT_LINKS = [
