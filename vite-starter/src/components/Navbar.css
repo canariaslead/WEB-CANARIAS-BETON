@@ -1,0 +1,135 @@
+.nav-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.nav-wrap--scrolled {
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.nav-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 64px;
+}
+
+/* ── left links ───────────────────────────────────── */
+.nav-left {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111111;
+  text-decoration: none;
+  border-radius: 8px;
+  letter-spacing: 0.01em;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-link:hover {
+  background: #f3f4f6;
+}
+
+.nav-chevron {
+  opacity: 0.45;
+  flex-shrink: 0;
+}
+
+/* ── center logo ──────────────────────────────────── */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.nav-logo__img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+.nav-logo__name {
+  font-family: 'Anton', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: #111111;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ── right ────────────────────────────────────────── */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.nav-lang {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #111111;
+  cursor: pointer;
+  padding: 7px 10px;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+  transition: background 0.15s;
+}
+
+.nav-lang:hover {
+  background: #f3f4f6;
+}
+
+.nav-cta {
+  background: #A3D63B;
+  color: #111111;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.nav-cta:hover {
+  background: #8BC531;
+  transform: translateY(-1px);
+}
+
+/* ── mobile ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-left { display: none; }
+  .nav-lang  { display: none; }
+  .nav-logo__name { display: none; }
+  .nav-inner { padding: 0 20px; grid-template-columns: 1fr auto 1fr; }
+  .nav-cta { font-size: 12px; padding: 9px 16px; }
+}

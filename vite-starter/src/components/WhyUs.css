@@ -1,0 +1,135 @@
+.whyus {
+  background: #F3F4F6;
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+/* ── header ──────────────────────────────────────── */
+.whyus__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 700px;
+}
+
+.whyus__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #6B7280;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.whyus__dot {
+  width: 7px;
+  height: 7px;
+  background: #A3D63B;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.whyus__title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 400;
+  color: #111111;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.whyus__sub {
+  font-size: 15px;
+  color: #6B7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── grid ────────────────────────────────────────── */
+.whyus__grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+}
+
+.whyus__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  position: relative;
+  padding: 0 24px;
+}
+
+/* vertical divider between items */
+.whyus__divider {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: #D1D5DB;
+}
+
+/* ── icon box ────────────────────────────────────── */
+.whyus__icon-box {
+  width: 80px;
+  height: 80px;
+  background: #A3D63B;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.whyus__item:hover .whyus__icon-box {
+  background: #8BC531;
+  transform: translateY(-4px);
+}
+
+/* ── label ───────────────────────────────────────── */
+.whyus__label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111111;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* ── dots decoration ─────────────────────────────── */
+.whyus__grid::before,
+.whyus__grid::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #A3D63B;
+  border-radius: 2px;
+}
+
+.whyus__grid::before { top: -20px; left: 50%; }
+.whyus__grid::after  { bottom: -20px; left: 50%; }
+
+@media (max-width: 768px) {
+  .whyus__grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .whyus__divider { display: none; }
+}

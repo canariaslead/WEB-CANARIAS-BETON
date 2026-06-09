@@ -1,0 +1,56 @@
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #A3D63B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+.intro--out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── text block ──────────────────────────────────── */
+.intro__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.02em;
+}
+
+.intro__line {
+  display: flex;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(52px, 9vw, 130px);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+
+/* ── letter states ───────────────────────────────── */
+.intro__letter {
+  display: inline-block;
+  transition: opacity 0.12s ease, color 0.15s ease;
+}
+
+/* not yet typed */
+.intro__letter--hidden {
+  opacity: 0;
+}
+
+/* being typed — ghost */
+.intro__letter--ghost {
+  opacity: 0.25;
+  color: #111111;
+}
+
+/* fully typed */
+.intro__letter--solid {
+  opacity: 1;
+  color: #111111;
+}

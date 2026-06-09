@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(npx create-next-app@latest nextjs-starter --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-turbopack)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(Remove-Item \"d:\\\\CANARIASLEAD\\\\CLIENTES\\\\CANARIAS BETON\\\\vite-starter\\\\src\\\\components\\\\Hero.css\" -Force)",
+      "Bash(Remove-Item \"d:\\\\CANARIASLEAD\\\\CLIENTES\\\\CANARIAS BETON\\\\vite-starter\\\\src\\\\components\\\\Hero.tsx\" -Force)",
+      "Bash(Remove-Item \"d:\\\\CANARIASLEAD\\\\CLIENTES\\\\CANARIAS BETON\\\\vite-starter\\\\src\\\\components\\\\Loader.css\" -Force)",
+      "Bash(Remove-Item \"d:\\\\CANARIASLEAD\\\\CLIENTES\\\\CANARIAS BETON\\\\vite-starter\\\\src\\\\components\\\\Loader.tsx\" -Force)",
+      "Bash(npx create-next-app@latest nextjs-starter --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-turbopack --yes)",
+      "Bash(cp \"d:/CANARIASLEAD/CLIENTES/CANARIAS BETON/nextjs-starter/public/video/hero.mp4\" \"/tmp/hero.mp4\")",
+      "Bash(rm -rf \"d:/CANARIASLEAD/CLIENTES/CANARIAS BETON/nextjs-starter\")",
+      "Bash(mkdir -p \"d:/CANARIASLEAD/CLIENTES/CANARIAS BETON/nextjs-starter/public/video\" && cp \"/tmp/hero.mp4\" \"d:/CANARIASLEAD/CLIENTES/CANARIAS BETON/nextjs-starter/public/video/hero.mp4\" && echo \"video copied\")",
+      "Bash(taskkill /PID 42400 /F)",
+      "PowerShell(Stop-Process -Id 42400 -Force)",
+      "Bash(winget install *)",
+      "Bash(ffmpeg -i \"d:/CANARIASLEAD/CLIENTES/CANARIAS BETON/vite-starter/src/assets/video_hero.mp4\" -g 1 -c:v libx264 -preset fast -crf 23 -an \"d:/CANARIASLEAD/CLIENTES/CANARIAS BETON/vite-starter/src/assets/video_hero_scrub.mp4\" -y)",
+      "Bash(findstr 5173)",
+      "Bash(Select-String -Pattern \"hero|HERO\" -i)",
+      "PowerShell(Get-ChildItem \"d:\\\\CANARIASLEAD\\\\CLIENTES\\\\CANARIAS BETON\\\\vite-starter\\\\src\\\\assets\" | Where-Object { $_.Name -match \"hero|HERO\" -or $_.Name -match \"3\" } | Select-Object Name)",
+      "PowerShell(Get-ChildItem \"d:\\\\CANARIASLEAD\\\\CLIENTES\\\\CANARIAS BETON\\\\vite-starter\\\\src\\\\assets\" | Where-Object { $_.Name -match \"logo|Logo|LOGO\" } | Select-Object Name)"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
+    ]
+  }
+}
