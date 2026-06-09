@@ -167,39 +167,25 @@
     height: 100%;
   }
 
-  /* overlay: gradiente bottom-up → texto blanco legible sobre camiones */
-  .hero__overlay {
-    display: block;
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(
-      to top,
-      rgba(0,0,0,0.82) 0%,
-      rgba(0,0,0,0.55) 35%,
-      rgba(0,0,0,0.10) 65%,
-      transparent 100%
-    );
-  }
+  .hero__overlay { display: none; }
 
-  /* texto: posicionado sobre los camiones */
+  /* texto: centrado en la zona de los camiones */
   .hero__content {
     top: auto;
-    bottom: 22%;
+    bottom: 55%;
     width: 92%;
     z-index: 2;
     gap: 10px;
   }
 
   .hero__title {
-    font-size: clamp(1.85rem, 8vw, 2.8rem);
-    color: #ffffff;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+    color: #111111;
   }
 
   .hero__sub {
-    font-size: 13px;
-    color: rgba(255,255,255,0.8);
+    font-size: 15px;
+    color: #6B7280;
     max-width: 100%;
   }
 

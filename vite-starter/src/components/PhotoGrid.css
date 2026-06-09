@@ -279,8 +279,18 @@
 @media (max-width: 480px) {
   .pgallery { padding: 48px 16px; }
 
-  /* ocultar slides inactivos en mobile — solo ver la activa full-width */
-  .pgallery__slide { display: none; }
+  /* track no se mueve — visibilidad controlada por --active */
+  .pgallery__track {
+    transform: none !important;
+    position: relative;
+  }
+
+  /* ocultar slides inactivos */
+  .pgallery__slide {
+    display: none;
+    width: calc(100vw - 32px);
+  }
+
   .pgallery__slide--active {
     display: block;
     width: calc(100vw - 32px);

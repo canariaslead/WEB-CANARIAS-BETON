@@ -18,6 +18,9 @@ export default function Footer() {
           <div className="footer__contact">
             <a href="tel:+34608890399" className="footer__contact-link">608 89 03 99</a>
             <a href="mailto:infocanariasbeton@gmail.com" className="footer__contact-link">infocanariasbeton@gmail.com</a>
+            <a href="https://maps.app.goo.gl/tk1SUTrcdxtnUxFC9" target="_blank" rel="noopener noreferrer" className="footer__contact-link">
+              Planta Arinaga — C. los Cactus 33, Agüimes
+            </a>
           </div>
           <div className="footer__social">
             {/* Instagram */}

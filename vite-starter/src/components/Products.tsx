@@ -57,10 +57,9 @@ export default function Products({ show = false }: Props) {
             className={`products__card${visible ? ' products__card--in' : ''}`}
             style={{ transitionDelay: `${200 + i * 120}ms` }}
           >
-            <div className="products__card-img">
-              <img src={c.img} alt={c.title} />
-            </div>
-            <div className="products__card-body">
+            <img src={c.img} alt={c.title} className="products__card-bg" />
+            <div className="products__card-overlay" />
+            <div className="products__card-content">
               <h3 className="products__card-title">{c.title}</h3>
               <p className="products__card-desc">{c.desc}</p>
             </div>
