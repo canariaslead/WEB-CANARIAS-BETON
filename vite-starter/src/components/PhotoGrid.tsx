@@ -33,7 +33,7 @@ export default function PhotoGrid() {
   const [visible, setVisible] = useState(false)
   const [lightbox, setLightbox] = useState<number | null>(null)
   const sectionRef = useRef<HTMLDivElement>(null)
-  const timerRef   = useRef<ReturnType<typeof setTimeout>>()
+  const timerRef   = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
 
   useEffect(() => {
     const check = () => {

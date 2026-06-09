@@ -130,6 +130,13 @@
   .nav-left { display: none; }
   .nav-lang  { display: none; }
   .nav-logo__name { display: none; }
-  .nav-inner { padding: 0 20px; grid-template-columns: 1fr auto 1fr; }
-  .nav-cta { font-size: 12px; padding: 9px 16px; }
+  .nav-inner {
+    padding: 0 16px;
+    grid-template-columns: auto 1fr auto;
+    gap: 0;
+  }
+  .nav-logo { justify-content: flex-start; }
+  .nav-logo__img { height: 32px; }
+  .nav-right { justify-content: flex-end; }
+  .nav-cta { font-size: 12px; padding: 8px 14px; border-radius: 16px; }
 }

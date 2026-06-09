@@ -226,9 +226,18 @@
   .statement__split {
     grid-template-columns: 1fr;
     padding: 60px 24px;
-    gap: 48px;
+    gap: 40px;
   }
   .statement__badge { top: -16px; right: -8px; width: 100px; height: 100px; }
-  .statement__logos-wrap { padding: 40px 24px; }
-  .statement__logos { gap: 36px; }
+  .statement__logos-wrap { padding: 36px 0; gap: 24px; }
+  .statement__logos { gap: 40px; }
+  .statement__logo-img { height: 48px; }
+  .statement__img { height: 280px; }
+}
+
+@media (max-width: 480px) {
+  .statement__split { padding: 48px 20px; gap: 32px; }
+  .statement__text { font-size: 15px; }
+  .statement__logos-label { font-size: 15px; padding: 0 20px; }
+  .statement__logo-img { height: 38px; }
 }

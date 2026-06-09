@@ -270,7 +270,17 @@
 @media (max-width: 900px) {
   .pgallery { padding: 60px 20px; }
   .pgallery__viewport { border-radius: 14px; }
-  .pgallery__slide { width: 100px; }
-  .pgallery__slide--active { width: calc(100vw - 40px - 100px - 12px); min-width: unset; }
+  .pgallery__slide { width: 90px; }
+  .pgallery__slide--active { width: calc(100vw - 40px - 90px - 12px); min-width: unset; }
   .pgallery__img-wrap { height: 260px; }
+  .pgallery__head { margin-bottom: 28px; }
+}
+
+@media (max-width: 480px) {
+  .pgallery { padding: 48px 16px; }
+  .pgallery__slide { width: 72px; }
+  .pgallery__slide--active { width: calc(100vw - 32px - 72px - 12px); }
+  .pgallery__img-wrap { height: 220px; border-radius: 12px; }
+  .pgallery__title { font-size: 24px; }
+  .pgallery__btn { width: 38px; height: 38px; }
 }

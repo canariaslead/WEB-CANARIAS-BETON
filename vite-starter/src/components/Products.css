@@ -167,6 +167,13 @@
 
 /* ── responsive ───────────────────────────────────── */
 @media (max-width: 900px) {
-  .products { padding: 56px 20px 64px; }
-  .products__grid { grid-template-columns: 1fr; max-width: 420px; }
+  .products { padding: 56px 20px 64px; gap: 40px; }
+  .products__grid { grid-template-columns: 1fr; max-width: 100%; }
+  .products__card-img { height: 180px; }
+}
+
+@media (max-width: 480px) {
+  .products { padding: 48px 16px 56px; gap: 32px; }
+  .products__actions { flex-direction: column; width: 100%; }
+  .products__btn { text-align: center; padding: 13px 20px; }
 }

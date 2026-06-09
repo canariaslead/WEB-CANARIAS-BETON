@@ -147,3 +147,12 @@
   .footer__brand { grid-column: 1 / -1; }
   .footer__bar { padding: 18px 24px; flex-direction: column; gap: 6px; text-align: center; }
 }
+
+@media (max-width: 480px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+    padding: 40px 20px 32px;
+    gap: 32px;
+  }
+  .footer__bar { padding: 16px 20px; font-size: 11px; }
+}

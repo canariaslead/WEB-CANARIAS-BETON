@@ -145,11 +145,16 @@
 
 /* ── responsive ───────────────────────────────────── */
 @media (max-width: 900px) {
-  .mv { padding: 60px 20px; }
+  .mv { padding: 60px 20px; gap: 12px; }
   .mv__top    { grid-template-columns: 1fr; }
   .mv__values { grid-template-columns: 1fr 1fr; }
+  .mv__card   { min-height: auto; padding: 28px 28px 32px; }
 }
 
 @media (max-width: 480px) {
-  .mv__values { grid-template-columns: 1fr; }
+  .mv { padding: 48px 16px; }
+  .mv__values { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .mv__card   { padding: 24px 20px 28px; }
+  .mv__card-title { font-size: clamp(22px, 7vw, 34px); }
+  .mv__value  { padding: 20px 16px; }
 }
