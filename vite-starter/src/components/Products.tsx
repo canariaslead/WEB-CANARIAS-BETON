@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import hero1 from '../assets/hero.jpeg'
-import hero2 from '../assets/hero (2).jpeg'
-import hero3 from '../assets/hero 1.png'
+import hero1 from '../assets/hormigon-fresco.jpeg'
+import hero2 from '../assets/hormigon-bombeado.jpeg'
+import hero3 from '../assets/fibra-polipropileno.png'
 import './Products.css'
 
 interface Props { show?: boolean }
