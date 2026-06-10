@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import heroBg from '../assets/HERO3.webp'
+import heroBg from '../assets/hero-camiones.webp'
 import Products from './Products'
 import './Hero.css'
 

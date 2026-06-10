@@ -1,7 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import hero1 from '../assets/hormigon-fresco.webp'
-import hero2 from '../assets/hormigon-bombeado.webp'
-import hero3 from '../assets/fibra-polipropileno.webp'
+import hero1     from '../assets/hero-distribucion.webp'
+import hero2     from '../assets/hero-bombeo.webp'
+import hero3     from '../assets/producto-fibra.webp'
+import sikaLogo  from '../assets/sika.svg'
+import prearsa   from '../assets/logo-prearsa.webp'
+import asinca    from '../assets/logo-asinca.webp'
+import bycanarias from '../assets/logo-bycanarias.webp'
+import arifoma   from '../assets/logo-arifoma.webp'
 import './Products.css'
 
 interface Props { show?: boolean }
@@ -67,9 +72,27 @@ export default function Products({ show = false }: Props) {
         ))}
       </div>
 
-      <div className={`products__actions${visible ? ' products__actions--in' : ''}`}>
-        <a href="#contacto" className="products__btn products__btn--dark">Solicitar presupuesto</a>
-        <a href="#" className="products__btn products__btn--outline">Ver productos</a>
+      <div className={`products__marquee-wrap${visible ? ' products__partners--in' : ''}`}>
+        <p className="products__marquee-label">Proveedores y colaboradores de confianza</p>
+        <div className="products__marquee">
+          <div className="products__logos">
+            <img src={sikaLogo}   alt="Sika"       className="products__logo-img" />
+            <img src={prearsa}    alt="Prearsa"     className="products__logo-img" />
+            <img src={asinca}     alt="Asinca"      className="products__logo-img" />
+            <img src={bycanarias} alt="By Canarias" className="products__logo-img" />
+            <img src={arifoma}    alt="Arifoma"     className="products__logo-img" />
+            <img src={sikaLogo}   alt="" className="products__logo-img" aria-hidden="true" />
+            <img src={prearsa}    alt="" className="products__logo-img" aria-hidden="true" />
+            <img src={asinca}     alt="" className="products__logo-img" aria-hidden="true" />
+            <img src={bycanarias} alt="" className="products__logo-img" aria-hidden="true" />
+            <img src={arifoma}    alt="" className="products__logo-img" aria-hidden="true" />
+            <img src={sikaLogo}   alt="" className="products__logo-img" aria-hidden="true" />
+            <img src={prearsa}    alt="" className="products__logo-img" aria-hidden="true" />
+            <img src={asinca}     alt="" className="products__logo-img" aria-hidden="true" />
+            <img src={bycanarias} alt="" className="products__logo-img" aria-hidden="true" />
+            <img src={arifoma}    alt="" className="products__logo-img" aria-hidden="true" />
+          </div>
+        </div>
       </div>
 
     </section>

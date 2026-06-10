@@ -22,7 +22,7 @@ const PLANTS = [
   },
 ]
 
-export default function Location() {
+export default function Location({ fullWidth = false }: { fullWidth?: boolean }) {
   const sectionRef = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
   const [active, setActive] = useState(0)
@@ -39,6 +39,50 @@ export default function Location() {
     check()
     return () => window.removeEventListener('scroll', check)
   }, [])
+
+  if (fullWidth) {
+    return (
+      <div ref={sectionRef} className="loc loc--full">
+        <ul className="loc__tabs">
+          {PLANTS.map((p, i) => (
+            <li
+              key={i}
+              className={`loc__tab${active === i ? ' loc__tab--active' : ''}`}
+              onClick={() => setActive(i)}
+            >
+              <span className="loc__plant-dot" />
+              <div className="loc__plant-info">
+                <span className="loc__plant-name">{p.name}</span>
+                <span className="loc__plant-addr">{p.address}</span>
+              </div>
+              <span className="loc__plant-phone">{p.phone}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="loc__map-full">
+          <iframe
+            key={active}
+            title={PLANTS[active].name}
+            src={PLANTS[active].mapSrc}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+          <div className="loc__card loc__card--overlay">
+            <div className="loc__card-info">
+              <span className="loc__card-label">Planta activa</span>
+              <span className="loc__card-name">{PLANTS[active].name}</span>
+              <span className="loc__card-addr">{PLANTS[active].address}</span>
+              <span className="loc__card-hours">{PLANTS[active].hours}</span>
+            </div>
+            <a href={PLANTS[active].mapsUrl} target="_blank" rel="noopener noreferrer" className="loc__card-btn">
+              Cómo llegar ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div ref={sectionRef} className="loc">

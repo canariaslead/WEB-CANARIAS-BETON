@@ -1,0 +1,206 @@
+/* ── hero content position ────────────────────────── */
+.spage__hero--short .spage__hero-content {
+  justify-content: flex-end;
+  padding-bottom: 36px;
+}
+
+.spage__hero--short .spage__hero-title,
+.spage__hero--short .spage__hero-sub,
+.spage__hero--short .spage__eyebrow {
+  color: #ffffff;
+}
+
+/* ── layout ───────────────────────────────────────── */
+.cpage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 700px;
+  margin: 64px auto;
+  max-width: 1300px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+}
+
+/* ── form side ────────────────────────────────────── */
+.cpage__form-wrap {
+  background: #F5F5F3;
+  padding: 64px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.cpage__tag {
+  display: inline-block;
+  border: 1.5px solid #A3D63B;
+  color: #5A9A1A;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 40px;
+  align-self: flex-start;
+}
+
+.cpage__title {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.cpage__sub {
+  font-size: 15px;
+  color: #6B7280;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 420px;
+}
+
+/* ── form ─────────────────────────────────────────── */
+.cpage__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cpage__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.cpage__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.cpage__input {
+  background: #ffffff;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #111111;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cpage__input::placeholder { color: #9CA3AF; }
+
+.cpage__input:focus {
+  border-color: #A3D63B;
+}
+
+.cpage__select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%239CA3AF' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-color: #ffffff;
+}
+
+.cpage__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.cpage__submit {
+  background: #A3D63B;
+  color: #111111;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 16px 28px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 4px;
+}
+
+.cpage__submit:hover {
+  background: #8BC531;
+  transform: translateY(-2px);
+}
+
+/* ── contact data ─────────────────────────────────── */
+.cpage__data {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.cpage__data-item {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.cpage__data-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9CA3AF;
+  min-width: 72px;
+}
+
+.cpage__data-val {
+  font-size: 14px;
+  color: #374151;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a.cpage__data-val:hover { color: #A3D63B; }
+
+/* ── photo side ───────────────────────────────────── */
+.cpage__photo-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.cpage__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── map ──────────────────────────────────────────── */
+.cpage__map {
+  width: 100%;
+  height: 620px;
+}
+
+.cpage__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ── responsive ───────────────────────────────────── */
+@media (max-width: 960px) {
+  .cpage {
+    grid-template-columns: 1fr;
+    margin: 32px 16px;
+  }
+  .cpage__photo-wrap { height: 320px; position: relative; }
+  .cpage__form-wrap { padding: 48px 28px; }
+  .cpage__row { grid-template-columns: 1fr; }
+}

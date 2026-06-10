@@ -1,23 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
-import sikaLogo   from '../assets/sika.svg'
-import prearsa    from '../assets/prearsa.webp'
-import asinca     from '../assets/asijca.webp'
-import bycanarias from '../assets/bycanarias.webp'
-import arifoma    from '../assets/logov3.webp'
-import plantImg   from '../assets/planta.webp'
+import plantImg   from '../assets/planta-canarias-beton.webp'
 import './Statement.css'
 
 export default function Statement() {
   const sectionRef = useRef<HTMLElement>(null)
-  const logosRef   = useRef<HTMLDivElement>(null)
-  const [visible, setVisible]      = useState(false)
-  const [logosVisible, setLogos]   = useState(false)
-  const [count, setCount]          = useState(3)
+  const [visible, setVisible] = useState(false)
+  const [count, setCount]     = useState(3)
   const counterStarted             = useRef(false)
 
   useEffect(() => {
     let sectionDone = false
-    let logosDone   = false
 
     const check = () => {
       if (!sectionDone && sectionRef.current) {
@@ -25,17 +17,8 @@ export default function Statement() {
         if (r.top < window.innerHeight * 0.75) {
           setVisible(true)
           sectionDone = true
+          window.removeEventListener('scroll', check)
         }
-      }
-      if (!logosDone && logosRef.current) {
-        const r = logosRef.current.getBoundingClientRect()
-        if (r.top < window.innerHeight * 1.1) {
-          setLogos(true)
-          logosDone = true
-        }
-      }
-      if (sectionDone && logosDone) {
-        window.removeEventListener('scroll', check)
       }
     }
 
@@ -104,30 +87,6 @@ export default function Statement() {
           </div>
         </div>
 
-      </div>
-
-      {/* logos marquee */}
-      <div ref={logosRef} className={`stmt-el statement__logos-wrap${logosVisible ? ' stmt-el--in' : ''}`}>
-        <p className="statement__logos-label">Proveedores y colaboradores de confianza</p>
-        <div className="statement__marquee">
-          <div className="statement__logos" aria-hidden="false">
-            <img src={sikaLogo}   alt="Sika"       className="statement__logo-img" />
-            <img src={prearsa}    alt="Prearsa"     className="statement__logo-img" />
-            <img src={asinca}     alt="Asinca"      className="statement__logo-img" />
-            <img src={bycanarias} alt="By Canarias" className="statement__logo-img" />
-            <img src={arifoma}    alt="Arifoma"     className="statement__logo-img" />
-            <img src={sikaLogo}   alt="" className="statement__logo-img" aria-hidden="true" />
-            <img src={prearsa}    alt="" className="statement__logo-img" aria-hidden="true" />
-            <img src={asinca}     alt="" className="statement__logo-img" aria-hidden="true" />
-            <img src={bycanarias} alt="" className="statement__logo-img" aria-hidden="true" />
-            <img src={arifoma}    alt="" className="statement__logo-img" aria-hidden="true" />
-            <img src={sikaLogo}   alt="" className="statement__logo-img" aria-hidden="true" />
-            <img src={prearsa}    alt="" className="statement__logo-img" aria-hidden="true" />
-            <img src={asinca}     alt="" className="statement__logo-img" aria-hidden="true" />
-            <img src={bycanarias} alt="" className="statement__logo-img" aria-hidden="true" />
-            <img src={arifoma}    alt="" className="statement__logo-img" aria-hidden="true" />
-          </div>
-        </div>
       </div>
 
     </section>

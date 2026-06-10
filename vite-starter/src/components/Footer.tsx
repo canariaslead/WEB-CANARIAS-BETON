@@ -1,4 +1,5 @@
-import logoSrc from '../assets/LOGO_BETON.webp'
+import { Link } from 'react-router-dom'
+import logoSrc from '../assets/logo.webp'
 import './Footer.css'
 
 export default function Footer() {
@@ -58,12 +59,9 @@ export default function Footer() {
         <div className="footer__col">
           <span className="footer__col-title">Navegación</span>
           <ul className="footer__links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><Link to="/">Inicio</Link></li>
+            <li><Link to="/nosotros">Nosotros</Link></li>
+            <li><Link to="/contacto">Contacto</Link></li>
           </ul>
         </div>
 
@@ -71,9 +69,9 @@ export default function Footer() {
         <div className="footer__col">
           <span className="footer__col-title">Servicios</span>
           <ul className="footer__links">
-            <li><a href="#">Fabricación</a></li>
-            <li><a href="#">Distribución</a></li>
-            <li><a href="#">Servicio de Bombeo</a></li>
+            <li><Link to="/fabricacion">Fabricación</Link></li>
+            <li><Link to="/distribucion">Distribución</Link></li>
+            <li><Link to="/bombeo">Servicio de Bombeo</Link></li>
           </ul>
         </div>
 

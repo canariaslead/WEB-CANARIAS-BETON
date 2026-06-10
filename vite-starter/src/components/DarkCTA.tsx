@@ -27,9 +27,6 @@ export default function DarkCTA() {
 
         {/* left */}
         <div className={`darkcta__left dcta-el${v ? ' dcta-el--in' : ''}`} style={{ transitionDelay: '0ms' }}>
-          <span className="darkcta__eyebrow">
-            <span className="darkcta__eyebrow-line" /> Canarias Beton <span className="darkcta__eyebrow-line" />
-          </span>
           <h2 className="darkcta__title">
             Solicita tu<br />presupuesto en<br />
             <span className="darkcta__accent">minutos</span>
